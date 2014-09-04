@@ -7,6 +7,6 @@ import java.util.UUID;
 
 public interface DataStore {
 //    Map<UUID,Event>
-//    Map<String, UUID>
-//    Map<Date,UUID>
+//    Map<String, List<UUID>>
+//    Map<Date, List<UUID>>
 }
