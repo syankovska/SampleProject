@@ -17,6 +17,8 @@ public class CalendarServiceImp implements CalendarService {
 
     @Override
     public void add(Event event) {
+        dataStore.add(event);
+        dataStore.add(event);
 
     }
 
@@ -27,7 +29,7 @@ public class CalendarServiceImp implements CalendarService {
 
     @Override
     public List<Event> searchByTitle(String title) {
-        return null;
+        return dataStore.getEventsByTitle(title);
     }
 
     @Override
