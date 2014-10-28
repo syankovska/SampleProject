@@ -24,6 +24,13 @@ public class CalendarServiceImp implements CalendarService {
 
     @Override
     public void remove(UUID id) {
+        logInfo(id);
+
+    }
+
+    @Override
+    public void logInfo(UUID id) {
+        System.out.println(id);
 
     }
 
