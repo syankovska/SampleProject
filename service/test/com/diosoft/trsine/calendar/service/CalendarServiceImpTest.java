@@ -48,8 +48,11 @@ public class CalendarServiceImpTest {
 
         // initialize mocks
         DataStore dataStore = mock(DataStore.class);
+
 //        doThrow(new NullPointerException())
+//
 //                .when(dataStore).getEventsByTitle(inputValue);
+
         when(dataStore.getEventsByTitle(inputValue))
                 .thenReturn(expectedValue);
 
@@ -60,6 +63,7 @@ public class CalendarServiceImpTest {
         List<Event> returnedValue = testClass.searchByTitle(inputValue);
 
         // assert return value
+
         assertEquals(expectedValue,returnedValue);
 
         // verify mock expectations
@@ -74,7 +78,8 @@ public class CalendarServiceImpTest {
         // initialize mocks
 
         // initialize class to test
-        CalendarService testClass  = spy(new CalendarServiceImp(null));
+        CalendarService calendarServiceImp = new CalendarServiceImp(null);
+        CalendarService testClass = spy(calendarServiceImp);
 
         // invoke method on class to test
         testClass.remove(inputValue);
@@ -83,5 +88,6 @@ public class CalendarServiceImpTest {
 
         // verify mock expectations
         verify(testClass).logInfo(inputValue);
+
     }
 }
